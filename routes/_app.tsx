@@ -9,15 +9,15 @@ function MetaTags(
     <>
       {/* Primary Meta Tags */}
       <title>
-        ${credentials.name} - Experienced Web Developer | Full Portfolio
+        ${credentials.name} - Junior Game Programmer | Full Portfolio
       </title>
       <meta
         name="title"
-        content={`${credentials.name} - Experienced Web Developer | Full Portfolio`}
+        content={`${credentials.name} - Junior Game Programmer | Full Portfolio`}
       />
       <meta
         name="description"
-        content={`Explore ${credentials.name}'s portfolio showcasing a diverse range of web development projects. Specializing in full-stack development with expertise in JavaScript, React, Node.js, and more. Discover how I can bring your web vision to life.`}
+        content={`Explore ${credentials.name}'s portfolio showcasing a diverse range of game programming projects. Specializing in UI programming`}
       />
 
       {/* Open Graph / Facebook */}

@@ -29,6 +29,7 @@ loadIcons([
   "logos:mariadb-icon",
   "skill-icons:cassandra-light",
   "skill-icons:docker",
+  "fluent:textbox-16-filled"
 ]);
 
 function Hero() {
@@ -38,14 +39,15 @@ function Hero() {
         <h1 class="text-4xl font-bold text-primary">
           <TypingAnimation
             strings={[
-              '"Hello, World!"',
-              "I'm a developer.",
+              "Je m'appelle Simon Gosse",
+              "Je suis un game programmer",
             ]}
             autoStart={true}
           />
         </h1>
         <p class="text-xl mt-4">
-          I build web applications and websites using modern technologies.
+          Je suis un étudiant en seconde année de master Management Jeux et Industries Créatives à Cannes.
+          Je code principalement en C# sur Unity et me spécialise en programmation UI.
         </p>
       </div>
       <SpinningModel />
@@ -59,7 +61,7 @@ interface Value {
   image: string;
 }
 
-function Values() {
+/*function Values() {
   const values: Value[] = [
     {
       title: "Passion for Continuous Learning",
@@ -107,28 +109,33 @@ function Values() {
       <Wave flip={true} />
     </>
   );
-}
+}*/
 
 interface Experience {
   title: string;
   company: string;
   timePeriod: string;
   location: string;
+  description: string;
 }
 
 function Experience() {
   const experiences: Experience[] = [
     {
-      title: "Full Stack Web Developer",
-      company: "AST Advanced Sales Technologies GmbH",
-      timePeriod: "Sep 2023 - Apr 2024",
-      location: "Vienna, Austria",
+      title: "Junior UI Programmer (Work-Study)",
+      company: "La Moutarde",
+      timePeriod: "Sep 2022 - Sep 2023",
+      location: "Montpellier, France (Full Remote)",
+      description: "Durant mon année en Licence Professionnelle Médias Interactifs et Application Mixtes Immersives j'ai eu l'opportunité d'effectuer une alternance en tant que Junior UI Programmer chez La Moutarde." +
+                    "J'ai ainsi pu travailler sur leur  jeu Terra Memoria. Grâce à cette expérience, j'ai pu développer mes compétences en programmation C# sur Unity."+
+                    "J'ai également pu travailler sur l'interface utilisateur du jeu, en collaboration avec les graphistes et les game designers."
     },
     {
-      title: "Junior Web Developer",
-      company: "AST Advanced Sales Technologies GmbH",
-      timePeriod: "Feb 2023 - Sep 2023",
-      location: "Vienna, Austria",
+      title: "Video Editor",
+      company: "KO Visuel",
+      timePeriod: "Feb 2021 - March 2021",
+      location: "Limoux, France",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac nunc et turpis euismod dapibus id eget metus. Sed eget felis sit amet eros fringilla aliquam sit amet sit amet nulla. Suspendisse ac tincidunt ante, a interdum eros. Vivamus laoreet pretium urna in consequat. Integer eu ligula id magna condimentum dignissim id in sem. Donec mattis, ante eget vehicula viverra, enim ex blandit enim, et commodo arcu nisi non diam. Phasellus feugiat pharetra semper. Proin scelerisque ligula vel hendrerit blandit."
     },
   ];
 
@@ -173,13 +180,95 @@ function Experience() {
                   />
                   {experience.location}
                 </span>
+                <span className="flex items-top gap-2 text-gray">
+                  <Icon
+                      icon="fluent:textbox-16-filled"
+                      width="none"
+                      height="none"
+                  />
+                  <p>{experience.description}</p>
+                </span>
               </div>
             </div>
           </>
         ))}
       </div>
-      <h1 class="text-3xl font-bold text-primary">Work Experience</h1>
+      <h1 class="text-3xl font-bold text-primary">Expériences Professionnelles</h1>
     </section>
+  );
+}
+
+interface School {
+  title: string;
+  timePeriod: string;
+  location: string;
+  description: string;
+}
+
+function School() {
+  const school: School[] = [
+    {
+      title: "Master Management Jeux et Industries Créatives (MAJIC)",
+      location: "Cannes, France",
+      timePeriod: "Septembre 2023 - Août 2025",
+      description: "Oui"
+    },
+    {
+      title: "Licens Professionnelle Médias Interactifs et Applications Mixtes Immersives (MIAMI)",
+      location: "Tarbes, France",
+      timePeriod: "Septembre 2022 - Août 2023",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac nunc et turpis euismod dapibus id eget metus. Sed eget felis sit amet eros fringilla aliquam sit amet sit amet nulla. Suspendisse ac tincidunt ante, a interdum eros. Vivamus laoreet pretium urna in consequat. Integer eu ligula id magna condimentum dignissim id in sem. Donec mattis, ante eget vehicula viverra, enim ex blandit enim, et commodo arcu nisi non diam. Phasellus feugiat pharetra semper. Proin scelerisque ligula vel hendrerit blandit."
+    },
+  ];
+
+  return (
+      <section class="p-4 flex flex-wrap-reverse justify-evenly items-center gap-4">
+        <div class="flex flex-col">
+          {school.map((school, i) => (
+              <>
+                {i > 0 &&
+                    (
+                        <div class="flex flex-col gap-2 ml-8 my-2">
+                          {[...Array(3)].map(() => (
+                              <span className="w-1 aspect-square bg-gray-500 rounded-full" />
+                          ))}
+                        </div>
+                    )}
+
+                <div class="card">
+                  <div class="card-body p-4">
+                    <h2 class="card-title">{school.title}</h2>
+                    <span class="flex items-center gap-2 text-gray">
+                  <Icon
+                      icon="tabler:calendar-filled"
+                      width="none"
+                      height="none"
+                  />
+                      {school.timePeriod}
+                </span>
+                    <span class="flex items-center gap-2 text-gray">
+                  <Icon
+                      icon="carbon:location-filled"
+                      width="none"
+                      height="none"
+                  />
+                      {school.location}
+                </span>
+                    <span className="flex items-top gap-2 text-gray">
+                  <Icon
+                      icon="fluent:textbox-16-filled"
+                      width="none"
+                      height="none"
+                  />
+                  <p>{school.description}</p>
+                </span>
+                  </div>
+                </div>
+              </>
+          ))}
+        </div>
+        <h1 class="text-3xl font-bold text-primary">Formations</h1>
+      </section>
   );
 }
 
@@ -214,7 +303,7 @@ function Projects() {
   return (
     <section class="p-4 my-8">
       <h1 class="text-3xl font-bold text-primary text-center mb-4">
-        Projects and Contributions
+        Mes Projets
       </h1>
       <div class="flex flex-wrap justify-center items-center gap-2">
         {projects.map((project) => (
@@ -248,32 +337,20 @@ function Projects() {
 
 function Technologies() {
   const technologies = [
+    "devicon:unity",
+    "skill-icons:cs",
+    "skill-icons:unrealengine",
+    "skill-icons:cpp",
     "vscode-icons:file-type-js-official",
     "logos:html-5",
     "logos:css-3",
     "logos:php",
-    "logos:typescript-icon",
-    "skill-icons:react-dark",
-    "logos:vue",
-    "devicon:nextjs",
-    "skill-icons:nuxtjs-dark",
-    "logos:nestjs",
-    "logos:fresh",
-    "skill-icons:laravel-dark",
-    "skill-icons:tailwindcss-dark",
-    "logos:deno",
-    "devicon:nodejs",
-    "vscode-icons:file-type-mongo",
-    "logos:postgresql",
-    "logos:mariadb-icon",
-    "skill-icons:cassandra-light",
-    "skill-icons:docker",
   ];
 
   return (
     <section class="my-16">
       <h1 class="text-3xl font-bold text-primary text-center mb-4">
-        Technologies
+        Compétences
       </h1>
       <div class="p-4 flex justify-center items-center flex-wrap gap-4">
         {technologies.map((technology) => (
@@ -293,9 +370,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Values />
-      <Projects />
+      <School />
       <Experience />
+      <Projects />
       <Technologies />
     </>
   );
