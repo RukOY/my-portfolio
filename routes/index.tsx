@@ -29,7 +29,15 @@ loadIcons([
   "logos:mariadb-icon",
   "skill-icons:cassandra-light",
   "skill-icons:docker",
-  "fluent:textbox-16-filled"
+  "fluent:textbox-16-filled",
+  "tabler:play-card-k",
+  "tabler:play-card-k",
+  "game-icons:crystal-growth",
+  "game-icons:vampire-cape",
+  "fa6-solid:dungeon",
+  "material-symbols:planet-outline",
+  "game-icons:plant-roots",
+  "fluent-emoji-high-contrast:japanese-castle"
 ]);
 
 function Hero() {
@@ -126,16 +134,9 @@ function Experience() {
       company: "La Moutarde",
       timePeriod: "Sep 2022 - Sep 2023",
       location: "Montpellier, France (Full Remote)",
-      description: "Durant mon année en Licence Professionnelle Médias Interactifs et Application Mixtes Immersives j'ai eu l'opportunité d'effectuer une alternance en tant que Junior UI Programmer chez La Moutarde." +
-                    "J'ai ainsi pu travailler sur leur  jeu Terra Memoria. Grâce à cette expérience, j'ai pu développer mes compétences en programmation C# sur Unity."+
-                    "J'ai également pu travailler sur l'interface utilisateur du jeu, en collaboration avec les graphistes et les game designers."
-    },
-    {
-      title: "Video Editor",
-      company: "KO Visuel",
-      timePeriod: "Feb 2021 - March 2021",
-      location: "Limoux, France",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac nunc et turpis euismod dapibus id eget metus. Sed eget felis sit amet eros fringilla aliquam sit amet sit amet nulla. Suspendisse ac tincidunt ante, a interdum eros. Vivamus laoreet pretium urna in consequat. Integer eu ligula id magna condimentum dignissim id in sem. Donec mattis, ante eget vehicula viverra, enim ex blandit enim, et commodo arcu nisi non diam. Phasellus feugiat pharetra semper. Proin scelerisque ligula vel hendrerit blandit."
+      description: "Durant mon année en Licence Professionnelle Médias Interactifs et Application Mixtes Immersives j'ai eu l'opportunité d'effectuer une alternance en tant que <b>UI Programmer</b> chez La Moutarde." +
+                    " J'ai ainsi pu travailler sur leur  jeu Terra Memoria. Grâce à cette expérience, j'ai pu développer mes compétences en programmation <b>C#</b> sur <b>Unity</b>."+
+                    " J'ai principalement travailler sur l'interface utilisateur du jeu, en collaboration avec les graphistes et les game designers."
     },
   ];
 
@@ -186,7 +187,7 @@ function Experience() {
                       width="none"
                       height="none"
                   />
-                  <p>{experience.description}</p>
+                  <div dangerouslySetInnerHTML={{ __html: experience.description }}></div>
                 </span>
               </div>
             </div>
@@ -211,13 +212,14 @@ function School() {
       title: "Master Management Jeux et Industries Créatives (MAJIC)",
       location: "Cannes, France",
       timePeriod: "Septembre 2023 - Août 2025",
-      description: "Oui"
+      description: "Master en Management de Jeux, où j'ai eu l'occasion de réaliser plusieurs projets en tant que programmeur dont deux projets principaux que l'on développe en équipe d'envrion 10 personnes sur une durée de 6 mois." +
+          "Nous avons ensuite eu l'opportunité de présenter ces jeux au grand public à l'occasion du Festival International du Jeu à Cannes."
     },
     {
       title: "Licens Professionnelle Médias Interactifs et Applications Mixtes Immersives (MIAMI)",
       location: "Tarbes, France",
       timePeriod: "Septembre 2022 - Août 2023",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac nunc et turpis euismod dapibus id eget metus. Sed eget felis sit amet eros fringilla aliquam sit amet sit amet nulla. Suspendisse ac tincidunt ante, a interdum eros. Vivamus laoreet pretium urna in consequat. Integer eu ligula id magna condimentum dignissim id in sem. Donec mattis, ante eget vehicula viverra, enim ex blandit enim, et commodo arcu nisi non diam. Phasellus feugiat pharetra semper. Proin scelerisque ligula vel hendrerit blandit."
+      description: "Licence Professionnelle spécialisée en Réalité Virtuelle mais avec plusieurs projets axés sur le jeu vidéo avec notamment les moteur Unity et Unreal. Lors de cette licence, j'ai eu l'opportunité de présenter mon projet <a href='https://atoxm.itch.io/dynasty' target='_blank'><em>Dynasty</em></a> au Laval Virtual."
     },
   ];
 
@@ -260,7 +262,7 @@ function School() {
                       width="none"
                       height="none"
                   />
-                  <p>{school.description}</p>
+                  <div dangerouslySetInnerHTML={{ __html: school.description }}></div>
                 </span>
                   </div>
                 </div>
@@ -283,20 +285,68 @@ interface Project {
 function Projects() {
   const projects: Project[] = [
     {
-      title: "Denoland Fresh",
+      title: "La Bergère de Nuages",
       description:
-        "Fresh is a full stack modern web framework for JavaScript and TypeScript developers.",
-      link: "https://fresh.deno.dev/",
-      type: "Open Source",
-      icon: "logos:deno",
+        "Un jeu en point & click et projet étudiant à l'ambition narrative forte et à l'ambiance cosy. Sur ce projet fait avec <b>Unity</b>, j'ai endossé le rôle de <b>Lead Programmer</b> et participer au développement de tous les aspects du jeu à l'aide du <b>C#</b>.",
+      link: "https://rukoy.itch.io/la-bergre-de-nuages",
+      type: "School Project",
+      icon: "material-symbols:cloud-outline",
     },
     {
-      title: "Dogr.",
+      title: "Terra Memoria",
       description:
-        "Dogr is a web application I developed to hone my skills in Nuxt and Vue.",
-      link: "https://dogr.vercel.app/",
-      type: "Personal",
-      icon: "logos:vue",
+          "Une pénurie de cristaux magiques et le réveil soudain de robots très anciens poussent six nouveaux amis dans une enquête rocambolesque à travers Terra, un monde fantasque et cozy alliant 3D et pixel art. Projet sur lequel j'ai eu l'opportunité de travailler lors de mon <b>alternance chez La Moutarde</b>. J'ai principalement participé à la <b>programmation UI</b>, à la <b>création de VFX</b> ainsi qu'avoir eu la chance de toucher rapidement au <b>portage console</b>",
+      link: "https://store.steampowered.com/app/1912750/Terra_Memoria/",
+      type: "Work Project",
+      icon: "game-icons:crystal-growth",
+    },
+    {
+      title: "Cosmostasia",
+      description:
+        "Formez votre équipe parmi les meilleurs combattants, combinez leurs cartes et capacités pour former votre deck, et décrochez la victoire. Sur ce projet fait sur <b>Godot</b>, j'ai participé à la <b>programmation UI</b> avec <b>GDScript</b> et à l'<b>UX Design</b>.",
+      link: "https://cosmostasia.itch.io/cosmostasia",
+      type: "School Project",
+      icon: "tabler:play-card-k",
+    },
+    {
+      title: "Vampire Slumber",
+      description:
+          "Aidez notre vampire très fatigué à retourner dans son cercueil pour une sieste bien méritée, mais évitez les lumières ! Ce jeu est le résultat de la Spooky Jam 2023 qui a duré 48h. Le jeu à été réalisé sur <b>Unity</b> en <b>C#</b> et j'ai participé à la réalisation de la mécanique principale.",
+      link: "https://rukoy.itch.io/vampire-slumber",
+      type: "Game Jam",
+      icon: "game-icons:vampire-cape",
+    },
+    {
+      title: "Dungeon Caretaker",
+      description:
+          "Glissez vous dans les coulisses et occupez-vous de votre donjon, réparez tous vos petits squelettes, réarmez vos pièges et réapprovisionnez vos coffres à butin pour être le donjon numéro 1 ! Ce jeu est le résultat de la GMTK Jam 2023 et a été réalisé en environ 48h. Ce projet réalisé sur <b>Unity</b> en <b>C#</b>, j'ai participé à la <b>programmation, principalement UI</b>.",
+      link: "https://0ur0boss.itch.io/dungeon-caretaker",
+      type: "Game Jam",
+      icon: "fa6-solid:dungeon",
+    },
+    {
+      title: "Simerva Project",
+      description:
+          "Le projet Simerva est un simulateur de marche à la troisième personne où le personnage principal se trouve dans une base spatiale située sur une planète inhospitalière. Ce projet réalisé en cours en quelque jours fût ma première expérience concrète sur <b>Unreal Engine 5</b>. J'ai participé à la création des déplacements du personnage en <b>Blueprint</b> ainsi qu'à la <b>création et programmation de l'UI</b>.",
+      link: "https://najouille.itch.io/simerva-project",
+      type: "School Project",
+      icon: "material-symbols:planet-outline",
+    },
+    {
+      title: "Seed Rails",
+      description:
+          "Seed Rails est un prototype réalisé en 48h à l'occasion de la Global Game Jam 2023 dont le thème était 'Roots'. Sur ce projet j'ai participé à la <b>création et programmation de l'UI</b>.",
+      link: "https://0ur0boss.itch.io/seedrails",
+      type: "Game Jam",
+      icon: "game-icons:plant-roots",
+    },
+    {
+      title: "Dynasty",
+      description:
+          "Plongez au cœur de l'arène dans un univers féodal japonais et affrontez une IA dans une bataille sanglante mêlant tower defense et stratégie de jeu de cartes dans Dynasty. Sur ce projet de cours réalisé sur<b>Unity</b> en <b>C#</b>, l'objectif était de recréer un jeu d'arcade connu mais en Réalité Virtuelle. J'ai participé à la programmation gameplay et UI du jeu. Mon groupe et moi avons eu la chance de présenter ce projet au Laval Virtual, plus grand salon de réalité virtuelle d'Europe.",
+      link: "https://atoxm.itch.io/dynasty",
+      type: "School Project",
+      icon: "fluent-emoji-high-contrast:japanese-castle",
     },
   ];
 
@@ -319,13 +369,13 @@ function Projects() {
                 {project.title}
                 <span class="badge badge-ghost ml-auto">{project.type}</span>
               </h2>
-              <p>{project.description}</p>
+              <div dangerouslySetInnerHTML={{ __html: project.description }}></div>
               <a
                 href={project.link}
                 target="_blank"
                 class="btn btn-primary text-base-100"
               >
-                View Project
+                Lien du Projet
               </a>
             </div>
           </div>

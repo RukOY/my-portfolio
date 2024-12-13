@@ -25,11 +25,11 @@ function MetaTags(
       <meta property="og:url" content={`${url}`} />
       <meta
         property="og:title"
-        content={`${credentials.name} - Experienced Web Developer | Full Portfolio`}
+        content={`${credentials.name} - Junior Game Programmer | Full Portfolio`}
       />
       <meta
         property="og:description"
-        content={`Explore ${credentials.name}'s portfolio showcasing a diverse range of web development projects. Specializing in full-stack development with expertise in JavaScript, React, Node.js, and more. Discover how I can bring your web vision to life.`}
+        content={`Explore ${credentials.name}'s portfolio showcasing a diverse range of game programming projects. Specializing in UI programming.`}
       />
       <meta
         property="og:image"
@@ -41,11 +41,11 @@ function MetaTags(
       <meta property="twitter:url" content={`${url}`} />
       <meta
         property="twitter:title"
-        content={`${credentials.name} - Experienced Web Developer | Full Portfolio`}
+        content={`${credentials.name} - Junior Game Programmer | Full Portfolio`}
       />
       <meta
         property="twitter:description"
-        content={`Explore ${credentials.name}'s portfolio showcasing a diverse range of web development projects. Specializing in full-stack development with expertise in JavaScript, React, Node.js, and more. Discover how I can bring your web vision to life.`}
+        content={`Explore ${credentials.name}'s portfolio showcasing a diverse range of game programming projects. Specializing in UI programming.`}
       />
       <meta
         property="twitter:image"
@@ -61,23 +61,28 @@ export default function App({ Component }: PageProps) {
   const socials = [
     {
       name: "GitHub",
-      url: "https://github.com/michael-pfister/deno-portfolio",
+      url: "https://github.com/RukOY",
       icon: "fa-brands:github",
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/ScaredToCompile",
+      url: "https://x.com/RukOYGameDev",
       icon: "fa-brands:twitter",
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/michael-pascal-pfister",
+      url: "www.linkedin.com/in/simon-gosse-58b6101b6",
       icon: "fa-brands:linkedin",
-    },
+    }, 
+      {
+          name: "Itch.io",
+          url: "https://rukoy.itch.io/",
+          icon: "cib:itch-io",
+      },  
   ];
 
   const credentials = {
-    name: "John Doe",
+    name: "Simon Gosse",
   };
 
   const url = "https://opensource-portfolio.deno.dev/";
@@ -88,7 +93,7 @@ export default function App({ Component }: PageProps) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <MetaTags credentials={credentials} url={url} />
-        <title>Developer Portfolio | {credentials.name}</title>
+        <title>Simon Gosse Portfolio | {credentials.name}</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body class="min-h-screen flex flex-col max-w-screen-xl mx-auto">
@@ -100,7 +105,7 @@ export default function App({ Component }: PageProps) {
         </main>
         <footer class="mt-auto footer w-auto m-2 p-4 bg-neutral text-neutral-content rounded-lg">
           <aside>
-            <span>MIT licensed with ❤️ by Michael</span>
+            <span>MIT licensed</span>
             <span>
               3D Art by{" "}
               <a

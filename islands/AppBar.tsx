@@ -28,7 +28,6 @@ export default function AppBar() {
     <nav class="flex justify-between items-center p-2">
       <a href="/" class="text-xl font-bold flex items-center">
         <Icon
-          icon="fa6-brands:dev"
           width="none"
           height="none"
         />
