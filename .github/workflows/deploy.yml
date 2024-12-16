@@ -22,9 +22,6 @@ jobs:
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-      
-       - name: Checkout
-        uses: actions/checkout@v4.2.2
 
       - name: Build step
         run: "deno task build"
