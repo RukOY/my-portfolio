@@ -54,8 +54,10 @@ function Hero() {
           />
         </h1>
         <p class="text-xl mt-4">
-          Je suis un étudiant en seconde année de master Management Jeux et Industries Créatives à Cannes.
-          Je code principalement en C# sur Unity et me spécialise en programmation UI.
+          Game Programmer Unity et C# spécialisé en UI.
+          J'intègre une vision UX à mon travail.
+          Grand joueur de shooters à la première personne comme Bioshock ou encore Half-life (oui oui ce sont des shooters).
+          Mon souhait est de pouvoir un jour créer des expériences équivalentes.
         </p>
       </div>
       <SpinningModel />
@@ -343,7 +345,7 @@ function Projects() {
     {
       title: "Dynasty",
       description:
-          "Plongez au cœur de l'arène dans un univers féodal japonais et affrontez une IA dans une bataille sanglante mêlant tower defense et stratégie de jeu de cartes dans Dynasty. Sur ce projet de cours réalisé sur<b>Unity</b> en <b>C#</b>, l'objectif était de recréer un jeu d'arcade connu mais en Réalité Virtuelle. J'ai participé à la programmation gameplay et UI du jeu. Mon groupe et moi avons eu la chance de présenter ce projet au Laval Virtual, plus grand salon de réalité virtuelle d'Europe.",
+          "Plongez au cœur de l'arène dans un univers féodal japonais et affrontez une IA dans une bataille sanglante mêlant tower defense et stratégie de jeu de cartes dans Dynasty. Sur ce projet de cours réalisé sur <b>Unity</b> en <b>C#</b>, l'objectif était de recréer un jeu d'arcade connu mais en Réalité Virtuelle. J'ai participé à la programmation gameplay et UI du jeu. Mon groupe et moi avons eu la chance de présenter ce projet au Laval Virtual, plus grand salon de réalité virtuelle d'Europe.",
       link: "https://atoxm.itch.io/dynasty",
       type: "School Project",
       icon: "fluent-emoji-high-contrast:japanese-castle",
