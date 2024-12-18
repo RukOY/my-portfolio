@@ -57,7 +57,7 @@ function Hero() {
           Game Programmer Unity et C# spécialisé en UI.
           J'intègre une vision UX à mon travail.
           Grand joueur de shooters à la première personne comme Bioshock ou encore Half-life (oui oui ce sont des shooters).
-          Mon souhait est de pouvoir un jour créer des expériences équivalentes.
+          Mon souhait est de pouvoir un jour créer des expériences équivalentes à ces classiques du jeu vidéo.
         </p>
       </div>
       <SpinningModel />
