@@ -25,13 +25,13 @@ export default function AppBar() {
   }, []);
 
   return (
-    <nav class="flex justify-between items-center p-2">
+    <nav class="flex justify-between items-center p-2 mt-12">
       <a href="/" class="text-xl font-bold flex items-center">
         <Icon
           width="none"
           height="none"
         />
-        Portfolio
+        Simon Gosse Portfolio
       </a>
       <ul class="flex gap-2">
         <li>
