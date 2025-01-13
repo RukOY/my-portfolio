@@ -8,19 +8,11 @@ loadIcons([
   "majesticons:suitcase",
   "tabler:calendar-filled",
   "carbon:location-filled",
-  "logos:deno",
-  "logos:vue",
   "vscode-icons:file-type-js-official",
   "vscode-icons:file-type-js-official",
   "logos:html-5",
   "logos:css-3",
   "logos:php",
-  "logos:typescript-icon",
-  "skill-icons:react-dark",
-  "devicon:nextjs",
-  "skill-icons:nuxtjs-dark",
-  "logos:nestjs",
-  "logos:fresh",
   "skill-icons:laravel-dark",
   "skill-icons:tailwindcss-dark",
   "devicon:nodejs",
@@ -143,7 +135,7 @@ function Experience() {
   ];
 
   return (
-    <section class="p-4 flex flex-wrap-reverse justify-evenly items-center gap-4">
+    <section class="p-4 mt-12 flex flex-wrap-reverse justify-evenly items-center gap-4">
       <div class="flex flex-col">
         {experiences.map((experience, i) => (
           <>
@@ -218,7 +210,7 @@ function School() {
           "Nous avons ensuite eu l'opportunité de présenter ces jeux au grand public à l'occasion du Festival International du Jeu à Cannes."
     },
     {
-      title: "Licens Professionnelle Médias Interactifs et Applications Mixtes Immersives (MIAMI)",
+      title: "Licence Professionnelle Médias Interactifs et Applications Mixtes Immersives (MIAMI)",
       location: "Tarbes, France",
       timePeriod: "Septembre 2022 - Août 2023",
       description: "Licence Professionnelle spécialisée en Réalité Virtuelle mais avec plusieurs projets axés sur le jeu vidéo avec notamment les moteur Unity et Unreal. Lors de cette licence, j'ai eu l'opportunité de présenter mon projet <a href='https://atoxm.itch.io/dynasty' target='_blank'><em>Dynasty</em></a> au Laval Virtual."
@@ -226,7 +218,7 @@ function School() {
   ];
 
   return (
-      <section class="p-4 flex flex-wrap-reverse justify-evenly items-center gap-4">
+      <section class="p-4 mt-12 flex flex-wrap-reverse justify-evenly items-center gap-4">
         <div class="flex flex-col">
           {school.map((school, i) => (
               <>
@@ -282,18 +274,11 @@ interface Project {
   link: string;
   type: string;
   icon: string;
+  image: string;
 }
 
 function Projects() {
   const projects: Project[] = [
-    {
-      title: "La Bergère de Nuages",
-      description:
-        "Un jeu en point & click et projet étudiant à l'ambition narrative forte et à l'ambiance cosy. Sur ce projet fait avec <b>Unity</b>, j'ai endossé le rôle de <b>Lead Programmer</b> et participer au développement de tous les aspects du jeu à l'aide du <b>C#</b>.",
-      link: "https://rukoy.itch.io/la-bergre-de-nuages",
-      type: "School Project",
-      icon: "material-symbols:cloud-outline",
-    },
     {
       title: "Terra Memoria",
       description:
@@ -301,7 +286,18 @@ function Projects() {
       link: "https://store.steampowered.com/app/1912750/Terra_Memoria/",
       type: "Work Project",
       icon: "game-icons:crystal-growth",
+      image: "/img/terra_memoria.jpg"
     },
+    {
+      title: "La Bergère de Nuages",
+      description:
+        "Un jeu en point & click et projet étudiant à l'ambition narrative forte et à l'ambiance cosy. Sur ce projet fait avec <b>Unity</b>, j'ai endossé le rôle de <b>Lead Programmer</b> et participer au développement de tous les aspects du jeu à l'aide du <b>C#</b>.",
+      link: "https://rukoy.itch.io/la-bergre-de-nuages",
+      type: "School Project",
+      icon: "material-symbols:cloud-outline",
+      image: "/img/bergère.jpg"
+    },
+    
     {
       title: "Cosmostasia",
       description:
@@ -309,38 +305,7 @@ function Projects() {
       link: "https://cosmostasia.itch.io/cosmostasia",
       type: "School Project",
       icon: "tabler:play-card-k",
-    },
-    {
-      title: "Vampire Slumber",
-      description:
-          "Aidez notre vampire très fatigué à retourner dans son cercueil pour une sieste bien méritée, mais évitez les lumières ! Ce jeu est le résultat de la Spooky Jam 2023 qui a duré 48h. Le jeu à été réalisé sur <b>Unity</b> en <b>C#</b> et j'ai participé à la réalisation de la mécanique principale.",
-      link: "https://rukoy.itch.io/vampire-slumber",
-      type: "Game Jam",
-      icon: "game-icons:vampire-cape",
-    },
-    {
-      title: "Dungeon Caretaker",
-      description:
-          "Glissez vous dans les coulisses et occupez-vous de votre donjon, réparez tous vos petits squelettes, réarmez vos pièges et réapprovisionnez vos coffres à butin pour être le donjon numéro 1 ! Ce jeu est le résultat de la GMTK Jam 2023 et a été réalisé en environ 48h. Ce projet réalisé sur <b>Unity</b> en <b>C#</b>, j'ai participé à la <b>programmation, principalement UI</b>.",
-      link: "https://0ur0boss.itch.io/dungeon-caretaker",
-      type: "Game Jam",
-      icon: "fa6-solid:dungeon",
-    },
-    {
-      title: "Simerva Project",
-      description:
-          "Le projet Simerva est un simulateur de marche à la troisième personne où le personnage principal se trouve dans une base spatiale située sur une planète inhospitalière. Ce projet réalisé en cours en quelque jours fût ma première expérience concrète sur <b>Unreal Engine 5</b>. J'ai participé à la création des déplacements du personnage en <b>Blueprint</b> ainsi qu'à la <b>création et programmation de l'UI</b>.",
-      link: "https://najouille.itch.io/simerva-project",
-      type: "School Project",
-      icon: "material-symbols:planet-outline",
-    },
-    {
-      title: "Seed Rails",
-      description:
-          "Seed Rails est un prototype réalisé en 48h à l'occasion de la Global Game Jam 2023 dont le thème était 'Roots'. Sur ce projet j'ai participé à la <b>création et programmation de l'UI</b>.",
-      link: "https://0ur0boss.itch.io/seedrails",
-      type: "Game Jam",
-      icon: "game-icons:plant-roots",
+      image: "/img/cosmostasia.png"
     },
     {
       title: "Dynasty",
@@ -349,15 +314,52 @@ function Projects() {
       link: "https://atoxm.itch.io/dynasty",
       type: "School Project",
       icon: "fluent-emoji-high-contrast:japanese-castle",
+      image: "/img/dynasty.jpg"
+    },
+    {
+      title: "Simerva Project",
+      description:
+          "Le projet Simerva est un simulateur de marche à la troisième personne où le personnage principal se trouve dans une base spatiale située sur une planète inhospitalière. Ce projet réalisé en cours en quelque jours fût ma première expérience concrète sur <b>Unreal Engine 5</b>. J'ai participé à la création des déplacements du personnage en <b>Blueprint</b> ainsi qu'à la <b>création et programmation de l'UI</b>.",
+      link: "https://najouille.itch.io/simerva-project",
+      type: "School Project",
+      icon: "material-symbols:planet-outline",
+      image: "/img/simerva_project.png"
+    },
+    {
+      title: "Vampire Slumber",
+      description:
+          "Aidez notre vampire très fatigué à retourner dans son cercueil pour une sieste bien méritée, mais évitez les lumières ! Ce jeu est le résultat de la Spooky Jam 2023 qui a duré 48h. Le jeu à été réalisé sur <b>Unity</b> en <b>C#</b> et j'ai participé à la réalisation de la mécanique principale.",
+      link: "https://rukoy.itch.io/vampire-slumber",
+      type: "Game Jam",
+      icon: "game-icons:vampire-cape",
+      image: "/img/vampire_slumber.png"
+    },
+    {
+      title: "Dungeon Caretaker",
+      description:
+          "Glissez vous dans les coulisses et occupez-vous de votre donjon, réparez tous vos petits squelettes, réarmez vos pièges et réapprovisionnez vos coffres à butin pour être le donjon numéro 1 ! Ce jeu est le résultat de la GMTK Jam 2023 et a été réalisé en environ 48h. Ce projet réalisé sur <b>Unity</b> en <b>C#</b>, j'ai participé à la <b>programmation, principalement UI</b>.",
+      link: "https://0ur0boss.itch.io/dungeon-caretaker",
+      type: "Game Jam",
+      icon: "fa6-solid:dungeon",
+      image: "/img/dungeon_caretaker.png"
+    },
+    {
+      title: "Seed Rails",
+      description:
+          "Seed Rails est un prototype réalisé en 48h à l'occasion de la Global Game Jam 2023 dont le thème était 'Roots'. Sur ce projet j'ai participé à la <b>création et programmation de l'UI</b>.",
+      link: "https://0ur0boss.itch.io/seedrails",
+      type: "Game Jam",
+      icon: "game-icons:plant-roots",
+      image: "/img/seed_rails.png"
     },
   ];
 
   return (
-    <section class="p-4 my-8">
+    <section class="p-4 mt-12 my-8">
       <h1 class="text-3xl font-bold text-primary text-center mb-4">
         Mes Projets
       </h1>
-      <div class="flex flex-wrap justify-center items-center gap-2">
+      <div class="flex flex-wrap justify-center items-start gap-2">
         {projects.map((project) => (
           <div class="card max-w-96">
             <div class="card-body p-4">
@@ -371,6 +373,14 @@ function Projects() {
                 {project.title}
                 <span class="badge badge-ghost ml-auto">{project.type}</span>
               </h2>
+              <figure className="w-1/3 md:h-48 md:w-auto rounded-none rounded-l-box md:rounded-none md:rounded-t-box">
+                <a href={project.link} target="_blank">
+                  <img
+                    className="w-full h-full"
+                    src={project.image}
+                  />
+                </a>
+              </figure> 
               <div dangerouslySetInnerHTML={{ __html: project.description }}></div>
               <a
                 href={project.link}
@@ -400,14 +410,14 @@ function Technologies() {
   ];
 
   return (
-    <section class="my-16">
+    <section class="mt-12 my-16">
       <h1 class="text-3xl font-bold text-primary text-center mb-4">
         Compétences
       </h1>
-      <div class="p-4 flex justify-center items-center flex-wrap gap-4">
+      <div class="p-4 flex justify-center items-center flex-wrap gap-8">
         {technologies.map((technology) => (
           <Icon
-            class="w-8 h-8"
+            class="w-16 h-16"
             icon={technology}
             width="none"
             height="none"
@@ -424,8 +434,8 @@ export default function Home() {
       <Hero />
       <School />
       <Experience />
-      <Projects />
       <Technologies />
+      <Projects />
     </>
   );
 }
